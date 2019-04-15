@@ -460,7 +460,7 @@ func (gm *GameManager) HandleNewChannel(c ssh.Channel, color string) {
 
 		for i:=0;i<len(tmpPlayer);i++{
 				if color == tmpPlayer[i].Name{
-					fmt.Println("find user")
+					fmt.Println("find user!")
 					session.Player = &tmpPlayer[i]
 				}
 		}
