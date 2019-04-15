@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 	"log"
-	//"time"
+	"time"
 	//"strconv"
 	//"strings"
 )
@@ -191,6 +191,13 @@ func main() {
 		 	defer conn.Close()
 			//fmt.Println("data arrive")
 		 	go ConnHandler(conn,gm)
+		}
+	}()
+
+	go func(){
+		for i:=0; i<10000;i++{
+			fmt.Println(i)
+			time.Sleep(1*time.Second)
 		}
 	}()
 	/*go func(){
